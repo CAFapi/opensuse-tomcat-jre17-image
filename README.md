@@ -1,12 +1,12 @@
-# openSUSE with Java 11 and Tomcat image
+# openSUSE with Java 17 and Tomcat image
 
-This project builds on the openSUSE Java 11 image [here](https://github.com/CAFapi/opensuse-java11-images) to build a pre-configured Tomcat Docker image.
+This project builds on the openSUSE Java 17 image [here](https://github.com/CAFapi/opensuse-java17-images) to build a pre-configured Tomcat Docker image.
 
 It can be used as a base image for hosting web projects which use Java technologies such as Java Servlets or JavaServer Pages.
 
 Here is an example Dockerfile which uses this image as a base:
 
-    FROM cafapi/opensuse-tomcat-jre11:latest
+    FROM cafapi/opensuse-tomcat-jre17:latest
 
     COPY demowebapp/ $CATALINA_HOME/webapps/demowebapp/
     COPY demowebapp-admin/ $CATALINA_HOME/adminapps/ROOT/
