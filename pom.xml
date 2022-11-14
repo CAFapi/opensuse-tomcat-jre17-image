@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright 2017-2022 Micro Focus or one of its affiliates.
+    Copyright 2022 Micro Focus or one of its affiliates.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -22,15 +22,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.cafapi</groupId>
-    <artifactId>opensuse-tomcat-jre11-image-aggregator</artifactId>
-    <version>2.6.2-557</version>
+    <artifactId>opensuse-tomcat-jre17-image-aggregator</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>openSUSE Tomcat JRE 11 image Aggregator</name>
+    <name>openSUSE Tomcat JRE 17 image Aggregator</name>
     <description>A base image for building a Web project.</description>
-    <url>https://github.com/CAFapi/opensuse-tomcat-jre11-image</url>
+    <url>https://github.com/CAFapi/opensuse-tomcat-jre17-image</url>
 
-    <inceptionYear>2017</inceptionYear>
+    <inceptionYear>2022</inceptionYear>
 
     <parent>
         <groupId>com.github.cafapi</groupId>
@@ -56,20 +56,16 @@
             <name>Michael Bryson</name>
             <email>michael.bryson@microfocus.com</email>
         </developer>
-        <developer>
-            <id>thilagavathi-santhoshkumar</id>
-            <name>Thilagavathi Santhoshkumar</name>
-            <email>thilagavathi.santhoshkumar@microfocus.com</email>
-        </developer>
     </developers>
 
     <modules>
         <module>caf-logging-tomcat-juli</module>
-        <module>opensuse-tomcat-jre11-image</module>
+        <module>opensuse-tomcat-jre17-image</module>
     </modules>
 
     <properties>
         <copyrightYear>2022</copyrightYear>
+        <copyrightNotice>Copyright ${copyrightYear} Micro Focus or one of its affiliates.</copyrightNotice>
         <maven.install.skip>true</maven.install.skip>
         <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
         <dockerHubOrganization>cafapi</dockerHubOrganization>
@@ -119,7 +115,7 @@
             <dependency>
                 <groupId>com.github.cafapi</groupId>
                 <artifactId>caf-logging-tomcat-juli</artifactId>
-                <version>2.6.2-557</version>
+                <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.github.cafapi.util</groupId>
@@ -174,9 +170,9 @@
     </build>
 
     <scm>
-        <connection>scm:git:https://github.com/CAFapi/opensuse-tomcat-jre11-image.git</connection>
-        <developerConnection>scm:git:https://github.com/CAFapi/opensuse-tomcat-jre11-image.git</developerConnection>
-        <url>https://github.com/CAFapi/opensuse-tomcat-jre11-image</url>
+        <connection>scm:git:https://github.com/CAFapi/opensuse-tomcat-jre17-image.git</connection>
+        <developerConnection>scm:git:https://github.com/CAFapi/opensuse-tomcat-jre17-image.git</developerConnection>
+        <url>https://github.com/CAFapi/opensuse-tomcat-jre17-image</url>
     </scm>
 
 </project>

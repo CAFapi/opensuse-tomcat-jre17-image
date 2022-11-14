@@ -1,5 +1,5 @@
 #
-# Copyright 2017-2022 Micro Focus or one of its affiliates.
+# Copyright 2022 Micro Focus or one of its affiliates.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -62,7 +62,7 @@ RUN chmod +x root/startup/startup.d/*
 #
 # The actual image definition
 #
-FROM ${DOCKER_HUB_PUBLIC}/cafapi/opensuse-jre11:3
+FROM ${DOCKER_HUB_PUBLIC}/cafapi/opensuse-jre17:1
 
 RUN zypper -n refresh && \
     zypper -n update && \
