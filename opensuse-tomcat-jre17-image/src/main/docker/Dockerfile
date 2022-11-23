@@ -82,6 +82,9 @@ RUN chown -R tomcat:tomcat ${TOMCAT_ROOT_DIR}
 # Give write access to log file
 RUN chmod -R 300 ${TOMCAT_ROOT_DIR}/logs
 
+RUN chmod -R 777 ${TOMCAT_CONF_DIR}
+RUN chmod -R 777 ${TOMCAT_BIN_DIR}
+RUN chmod -R 777 ${TOMCAT_LIB_DIR}
 
 #
 # The actual image definition
@@ -108,6 +111,6 @@ HEALTHCHECK CMD curl --fail http://localhost:8081/healthcheck || exit 1
 ENV RUNAS_USER=tomcat
 
 EXPOSE 8080 8081 8443
-CMD ["catalina.sh", "run"]
+CMD ["/usr/share/tomcat/bin/catalina.sh", "run"]
 
 COPY --from=builder /wd/root/ /
