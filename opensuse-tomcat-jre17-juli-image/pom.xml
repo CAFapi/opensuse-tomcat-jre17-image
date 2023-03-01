@@ -16,53 +16,21 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.github.cafapi</groupId>
         <artifactId>opensuse-tomcat-jre17-image-aggregator</artifactId>
         <version>1.1.0-SNAPSHOT</version>
     </parent>
-
-    <artifactId>opensuse-tomcat-jre17-image</artifactId>
+    <artifactId>opensuse-tomcat-jre17-juli-image</artifactId>
     <packaging>pom</packaging>
-
-    <name>openSUSE Tomcat JRE17 image</name>
-
+    
+    <name>openSUSE Tomcat JRE17 Juli image</name>
     <properties>
         <maven.install.skip>true</maven.install.skip>
         <DOCKER_HUB_PUBLIC>${dockerHubPublic}</DOCKER_HUB_PUBLIC>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-access</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.cafapi.logging</groupId>
-            <artifactId>caf-logging-logback-access-converters</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.cafapi</groupId>
-            <artifactId>caf-logging-tomcat-juli</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>log4j-over-slf4j</artifactId>
-        </dependency>
-    </dependencies>
 
     <build>
         <plugins>
@@ -89,28 +57,14 @@
                 <configuration>
                     <images>
                         <image>
-                            <name>${dockerCafImagePrefix}opensuse-tomcat-jre17${dockerProjectVersion}</name>
+                            <name>${dockerCafImagePrefix}opensuse-tomcat-jre17-juli${dockerProjectVersion}</name>
                             <build>
                                 <dockerFileDir>.</dockerFileDir>
-                                 <assembly>
-                                    <basedir>/</basedir>
-                                    <inline>
-                                        <dependencySets>
-                                            <dependencySet>
-                                                <outputDirectory>/lib</outputDirectory>
-                                                <useTransitiveDependencies>false</useTransitiveDependencies>
-                                            </dependencySet>
-                                        </dependencySets>
-                                    </inline>
-                                </assembly>
                                 <args>
                                     <!-- Enable internet access -->
                                     <http_proxy>${env.HTTP_PROXY}</http_proxy>
                                     <https_proxy>${env.HTTPS_PROXY}</https_proxy>
                                     <no_proxy>${env.NO_PROXY}</no_proxy>
-                                    
-                                    <!-- Pass in opensuse-tomcat-jre17-juli image as param -->
-                                    <JULI_IMAGE>${dockerCafImagePrefix}opensuse-tomcat-jre17-juli${dockerProjectVersion}</JULI_IMAGE>
                                 </args>
                             </build>
                         </image>
