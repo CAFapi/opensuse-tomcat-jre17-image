@@ -160,9 +160,6 @@
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
                 <configuration>
-                    <excludes>
-                        <exclude>src/test/resources/**</exclude>
-                    </excludes>
                     <mapping>
                         <xslt>XML_STYLE</xslt>
                     </mapping>
