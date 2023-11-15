@@ -103,10 +103,10 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>com.github.tomcat-slf4j-logback</groupId>
-                                    <artifactId>tomcat9-slf4j-logback</artifactId>
+                                    <artifactId>tomcat10-slf4j-logback</artifactId>
                                     <version>${tomcatVersion}</version>
                                     <overWrite>true</overWrite>
-                                    <outputDirectory>${project.build.directory}/tomcat9-slfj4-logback</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/tomcat10-slf4j-logback</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
@@ -205,20 +205,20 @@
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
-                                    <resource>META-INF/LICENSE-tomcat9-slf4j-logback</resource>
-                                    <file>${project.build.directory}/tomcat9-slfj4-logback/META-INF/LICENSE</file>
+                                    <resource>META-INF/LICENSE-tomcat10-slf4j-logback</resource>
+                                    <file>${project.build.directory}/tomcat10-slf4j-logback/META-INF/LICENSE</file>
                                 </transformer>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
                                     <resource>META-INF/LICENSE-logback.txt</resource>
-                                    <file>${project.build.directory}/tomcat9-slfj4-logback/META-INF/LICENSE-logback.txt</file>
+                                    <file>${project.build.directory}/tomcat10-slf4j-logback/META-INF/LICENSE-logback.txt</file>
                                 </transformer>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
                                     <resource>META-INF/LICENSE-slf4j.txt</resource>
-                                    <file>${project.build.directory}/tomcat9-slfj4-logback/META-INF/LICENSE-slf4j.txt</file>
+                                    <file>${project.build.directory}/tomcat10-slf4j-logback/META-INF/LICENSE-slf4j.txt</file>
                                 </transformer>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
                                     <resource>META-INF/LICENSE-tomcat.txt</resource>
-                                    <file>${project.build.directory}/tomcat9-slfj4-logback/META-INF/LICENSE-tomcat.txt</file>
+                                    <file>${project.build.directory}/tomcat10-slf4j-logback/META-INF/LICENSE-tomcat.txt</file>
                                 </transformer>
                             </transformers>
                         </configuration>
