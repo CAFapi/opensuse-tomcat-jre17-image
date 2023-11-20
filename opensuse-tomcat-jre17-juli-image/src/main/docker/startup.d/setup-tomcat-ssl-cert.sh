@@ -66,5 +66,5 @@ then
     fi
 
     echo "File after"
-    cat "${SSL_TOMCAT_CA_CERT_LOCATION}"
+    cat "$CATALINA_HOME/conf/server.xml"
 fi
