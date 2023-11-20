@@ -44,7 +44,7 @@ then
     then
         echo "Replacing keystore pass in $CATALINA_HOME/conf/server.xml with provided environment variable SSL_TOMCAT_CA_CERT_KEYSTORE_PASS"
         echo "RORY SSL_TOMCAT_CA_CERT_KEYSTORE_PASS is $SSL_TOMCAT_CA_CERT_KEYSTORE_PASS"
-        sed -i "s@keystorePass=.*@keystorePass=\"$SSL_TOMCAT_CA_CERT_KEYSTORE_PASS\"@" $CATALINA_HOME/conf/server.xml
+        sed -i "s|keystorePass=.*|keystorePass=\"$SSL_TOMCAT_CA_CERT_KEYSTORE_PASS\"|" $CATALINA_HOME/conf/server.xml
     fi
 
     # Replace default password with a user defined password if provided
@@ -53,7 +53,7 @@ then
         echo "Replacing key pass in $CATALINA_HOME/conf/server.xml with provided environment variable SSL_TOMCAT_CA_CERT_KEY_PASS"
         echo "RORY SSL_TOMCAT_CA_CERT_KEY_PASS is $SSL_TOMCAT_CA_CERT_KEY_PASS"
         
-        sed -i "s@keyPass=.*@keyPass=\"$SSL_TOMCAT_CA_CERT_KEY_PASS\"@" $CATALINA_HOME/conf/server.xml
+        sed -i "s|keyPass=.*|keyPass=\"$SSL_TOMCAT_CA_CERT_KEY_PASS\"|" $CATALINA_HOME/conf/server.xml
     fi
 
     # Replace default alias with a user defined alias if provided
