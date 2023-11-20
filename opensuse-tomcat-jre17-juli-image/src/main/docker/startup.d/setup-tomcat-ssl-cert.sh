@@ -50,6 +50,8 @@ then
     if [ -n "${SSL_TOMCAT_CA_CERT_KEY_PASS}" ]
     then
         echo "Replacing key pass in $CATALINA_HOME/conf/server.xml with provided environment variable SSL_TOMCAT_CA_CERT_KEY_PASS"
+        echo "RORY SSL_TOMCAT_CA_CERT_KEY_PASS is $SSL_TOMCAT_CA_CERT_KEY_PASS..."
+        
         sed -i "s@keyPass=.*@keyPass=\"$SSL_TOMCAT_CA_CERT_KEY_PASS\"@" $CATALINA_HOME/conf/server.xml
     fi
 
