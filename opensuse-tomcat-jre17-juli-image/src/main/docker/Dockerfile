@@ -21,7 +21,7 @@ ARG DOCKER_HUB_PUBLIC=docker.io
 # Preliminary image that downloads Tomcat and makes some modifications
 #
 FROM ${DOCKER_HUB_PUBLIC}/opensuse/leap:latest AS builder
-RUN zypper -n install gzip tar xsltproc
+RUN zypper -n install gzip tar libxslt-tools
 WORKDIR /wd
 
 ENV TOMCAT_PARENT_DIR=/wd/root/usr/share \
