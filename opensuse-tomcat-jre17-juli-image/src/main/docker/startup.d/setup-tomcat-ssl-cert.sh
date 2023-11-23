@@ -60,6 +60,4 @@ then
         sed -i "s@keyAlias=.*@keyAlias=\"$SSL_TOMCAT_CA_CERT_KEYSTORE_ALIAS\"@" $CATALINA_HOME/conf/server.xml
     fi
 
-    echo "File after"
-    cat "$CATALINA_HOME/conf/server.xml"
 fi
