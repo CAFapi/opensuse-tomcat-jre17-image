@@ -27,8 +27,6 @@
 if [ -n "${SSL_TOMCAT_CA_CERT_LOCATION}" ]
 then
     echo "Tomcat CA Cert provided at location: ${SSL_TOMCAT_CA_CERT_LOCATION}"
-    echo "File before"
-    cat "$CATALINA_HOME/conf/server.xml"
 
     # search for and delete the lines in the server.xml with:
     # <!-- setup-tomcat-ssl-cert.sh TLS section start
@@ -45,7 +43,6 @@ then
     if [ -n "${SSL_TOMCAT_CA_CERT_KEYSTORE_PASS}" ]
     then
         echo "Replacing keystore pass in $CATALINA_HOME/conf/server.xml with provided environment variable SSL_TOMCAT_CA_CERT_KEYSTORE_PASS"
-        echo "RORY SSL_TOMCAT_CA_CERT_KEYSTORE_PASS is $SSL_TOMCAT_CA_CERT_KEYSTORE_PASS"
         awk -v new_pass="$SSL_TOMCAT_CA_CERT_KEYSTORE_PASS" '/keystorePass=/ {sub(/keystorePass=.*/, "keystorePass=\"" new_pass "\"")} 1' $CATALINA_HOME/conf/server.xml > temp_file && mv temp_file $CATALINA_HOME/conf/server.xml
     fi
 
@@ -53,7 +50,6 @@ then
     if [ -n "${SSL_TOMCAT_CA_CERT_KEY_PASS}" ]
     then
         echo "Replacing key pass in $CATALINA_HOME/conf/server.xml with provided environment variable SSL_TOMCAT_CA_CERT_KEY_PASS"
-        echo "RORY SSL_TOMCAT_CA_CERT_KEY_PASS is $SSL_TOMCAT_CA_CERT_KEY_PASS"
         awk -v new_pass="$SSL_TOMCAT_CA_CERT_KEY_PASS" '/keyPass=/ {sub(/keyPass=.*/, "keyPass=\"" new_pass "\"")} 1' $CATALINA_HOME/conf/server.xml > temp_file && mv temp_file $CATALINA_HOME/conf/server.xml
     fi
 
@@ -61,7 +57,6 @@ then
     if [ -n "${SSL_TOMCAT_CA_CERT_KEYSTORE_ALIAS}" ]
     then
         echo "Replacing keystore alias in $CATALINA_HOME/conf/server.xml with provided environment variable SSL_TOMCAT_CA_CERT_KEYSTORE_ALIAS"
-        echo "RORY SSL_TOMCAT_CA_CERT_KEYSTORE_ALIAS is $SSL_TOMCAT_CA_CERT_KEYSTORE_ALIAS"
         sed -i "s@keyAlias=.*@keyAlias=\"$SSL_TOMCAT_CA_CERT_KEYSTORE_ALIAS\"@" $CATALINA_HOME/conf/server.xml
     fi
 
