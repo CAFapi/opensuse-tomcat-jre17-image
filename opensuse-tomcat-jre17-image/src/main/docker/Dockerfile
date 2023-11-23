@@ -23,7 +23,7 @@ ARG DOCKER_HUB_PUBLIC=docker.io
 ARG JULI_IMAGE
 FROM $JULI_IMAGE AS builder
 
-RUN zypper -n install xsltproc
+RUN zypper -n install libxslt-tools
 
 ENV CATALINA_HOME /usr/share/tomcat
 ENV CATALINA_CONF_DIR $CATALINA_HOME/conf
