@@ -23,7 +23,7 @@
 
     <groupId>com.github.cafapi</groupId>
     <artifactId>opensuse-tomcat-jre17-image-aggregator</artifactId>
-    <version>1.7.0-SNAPSHOT</version>
+    <version>2.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>openSUSE Tomcat JRE 17 image Aggregator</name>
@@ -35,7 +35,7 @@
     <parent>
         <groupId>com.github.cafapi</groupId>
         <artifactId>caf-common-parent</artifactId>
-        <version>4.1.0-380</version>
+        <version>5.0.0-431</version>
     </parent>
 
     <licenses>
@@ -66,14 +66,11 @@
 
     <properties>
         <copyrightYear>2023</copyrightYear>
-        <copyrightNotice>Copyright ${project.inceptionYear}-${copyrightYear} Open Text.</copyrightNotice>
         <maven.install.skip>true</maven.install.skip>
         <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
         <dockerHubOrganization>cafapi</dockerHubOrganization>
         <dockerCafImagePrefix>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerCafImagePrefix>
         <dockerProjectVersion>${dockerVersionSeperator}${project.version}</dockerProjectVersion>
-        <logbackVersion>1.2.3</logbackVersion>
-        <tomcatVersion>9.0.76</tomcatVersion>
     </properties>
 
     <dependencyManagement>
@@ -81,22 +78,27 @@
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-access</artifactId>
-                <version>${logbackVersion}</version>
+                <version>1.4.11</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>${logbackVersion}</version>
+                <version>1.4.11</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>${logbackVersion}</version>
+                <version>1.4.11</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
-                <version>2.9.8</version>
+                <version>2.16.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.cafapi</groupId>
+                <artifactId>caf-logging-tomcat-juli</artifactId>
+                <version>2.1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.github.cafapi.logging</groupId>
@@ -105,58 +107,72 @@
             </dependency>
             <dependency>
                 <groupId>com.github.cafapi.logging</groupId>
-                <artifactId>caf-logging-logback-converters</artifactId>
-                <version>2.0.0-238</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.cafapi.logging</groupId>
                 <artifactId>caf-logging-logback-access-converters</artifactId>
                 <version>2.0.0-238</version>
             </dependency>
             <dependency>
-                <groupId>com.github.cafapi</groupId>
-                <artifactId>caf-logging-tomcat-juli</artifactId>
-                <version>1.7.0-SNAPSHOT</version>
+                <groupId>com.github.cafapi.logging</groupId>
+                <artifactId>caf-logging-logback-converters</artifactId>
+                <version>2.0.0-238</version>
             </dependency>
             <dependency>
                 <groupId>com.github.cafapi.util</groupId>
                 <artifactId>util-process-identifier</artifactId>
-                <version>1.16.0-118</version>
+                <version>3.0.0-549</version>
             </dependency>
             <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>1.2.16</version>
+                <groupId>com.github.tomcat-slf4j-logback</groupId>
+                <artifactId>tomcat10-slf4j-logback</artifactId>
+                <version>10.1.16</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.14.0</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-text</artifactId>
-                <version>1.10.0</version>
+                <version>1.11.0</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.tomcat</groupId>
                 <artifactId>tomcat-juli</artifactId>
-                <version>${tomcatVersion}</version>
+                <version>10.1.16</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>jcl-over-slf4j</artifactId>
-                <version>1.7.25</version>
+                <version>2.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>log4j-over-slf4j</artifactId>
-                <version>1.7.30</version>
+                <version>2.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.7.25</version>
+                <version>2.0.9</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>io.fabric8</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>0.43.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-shade-plugin</artifactId>
+                    <version>3.5.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>com.mycila</groupId>
