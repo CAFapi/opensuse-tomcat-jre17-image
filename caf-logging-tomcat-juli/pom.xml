@@ -24,7 +24,7 @@
     <parent>
         <groupId>com.github.cafapi</groupId>
         <artifactId>opensuse-tomcat-jre17-image-aggregator</artifactId>
-        <version>1.7.0-5</version>
+        <version>1.7.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>caf-logging-tomcat-juli</artifactId>
