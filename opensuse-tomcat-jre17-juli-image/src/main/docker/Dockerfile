@@ -30,7 +30,7 @@ ENV TOMCAT_ROOT_DIR $TOMCAT_PARENT_DIR/$TOMCAT_DIR_NAME
 ENV TOMCAT_CONF_DIR $TOMCAT_ROOT_DIR/conf
 
 # Extract Tomcat and remove unwanted web applications
-COPY apache-tomcat-10.1.16.tar.gz .
+ADD https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.16/bin/apache-tomcat-10.1.16.tar.gz .
 RUN mkdir -p $TOMCAT_PARENT_DIR && \
     cd $TOMCAT_PARENT_DIR && \
     tar xzf /wd/apache-tomcat-10.1.16.tar.gz && \
