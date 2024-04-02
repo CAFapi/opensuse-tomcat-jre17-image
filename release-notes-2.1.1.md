@@ -2,7 +2,7 @@
 ${version-number}
 
 #### Patch Fixes Included
-This release includes OS package updates only.
+- This release includes OS package updates only.
 
 #### New Features
 -None
