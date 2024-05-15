@@ -29,7 +29,6 @@
     <name>openSUSE Tomcat JRE17 Juli image</name>
     <properties>
         <maven.install.skip>true</maven.install.skip>
-        <DOCKER_HUB_PUBLIC>${dockerHubPublic}</DOCKER_HUB_PUBLIC>
     </properties>
 
     <build>
