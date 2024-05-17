@@ -194,7 +194,7 @@
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/opensuse/leap</repository>
-                            <tag>15.5</tag>
+                            <tag>15.6</tag>
                         </image>
                     </imageManagement>
                 </configuration>
