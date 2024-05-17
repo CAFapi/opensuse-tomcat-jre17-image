@@ -195,7 +195,6 @@
                         <image>
                             <repository>${dockerHubPublic}/opensuse/leap</repository>
                             <tag>15.5</tag>
-                            <digest>sha256:da3a32575d87b0f01b8db23d481db00ede78bf7dcab57b1c653aa1d8255068c6</digest>
                         </image>
                     </imageManagement>
                 </configuration>
