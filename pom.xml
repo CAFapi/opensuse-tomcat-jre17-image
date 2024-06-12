@@ -85,12 +85,12 @@
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.5.3</version>
+                <version>1.5.6</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>1.5.3</version>
+                <version>1.5.6</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -125,7 +125,7 @@
             <dependency>
                 <groupId>com.github.tomcat-slf4j-logback</groupId>
                 <artifactId>tomcat10-slf4j-logback</artifactId>
-                <version>10.1.20</version>
+                <version>10.1.24</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -140,7 +140,7 @@
             <dependency>
                 <groupId>org.apache.tomcat</groupId>
                 <artifactId>tomcat-juli</artifactId>
-                <version>10.1.20</version>
+                <version>10.1.24</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
