@@ -23,7 +23,7 @@
 
     <groupId>com.github.cafapi</groupId>
     <artifactId>opensuse-tomcat-jre17-image-aggregator</artifactId>
-    <version>2.5.0-SNAPSHOT</version>
+    <version>2.4.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>openSUSE Tomcat JRE 17 image Aggregator</name>
@@ -100,7 +100,7 @@
             <dependency>
                 <groupId>com.github.cafapi</groupId>
                 <artifactId>caf-logging-tomcat-juli</artifactId>
-                <version>2.5.0-SNAPSHOT</version>
+                <version>2.4.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.github.cafapi.logging</groupId>
@@ -189,8 +189,8 @@
                     <imageManagement>
                         <image>
                             <repository>${dockerHubPublic}/cafapi/opensuse-jre17</repository>
-                            <tag>4.1.0</tag>
-                            <digest>sha256:ebb4816ac8b80c07f091f30104ae5710e5e624c985cfd41fafc3dbf4c631a5a9</digest>
+                            <tag>4.1.1</tag>
+                            <digest>sha256:56b76dce4298e02032712d5c375cb04a75739f3e5909a61c55763ca10dd21de8</digest>
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/opensuse/leap</repository>
