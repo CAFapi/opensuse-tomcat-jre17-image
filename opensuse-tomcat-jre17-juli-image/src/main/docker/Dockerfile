@@ -27,7 +27,7 @@ ENV TOMCAT_ROOT_DIR $TOMCAT_PARENT_DIR/$TOMCAT_DIR_NAME
 ENV TOMCAT_CONF_DIR $TOMCAT_ROOT_DIR/conf
 
 # Download, extract Tomcat and remove unwanted web applications
-RUN curl --noproxy '*' -fsSL -o /wd/apache-tomcat-10.1.34.tar.gz https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.34/bin/apache-tomcat-10.1.34.tar.gz && \
+RUN curl -fsSL -o /wd/apache-tomcat-10.1.34.tar.gz https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.34/bin/apache-tomcat-10.1.34.tar.gz && \
     echo e29c4d0e26295d64dfeee399e7719b5baac2682ac0e7b53702f26d630fea761f93ddf60674dfe87c41ddd9b79d4938a6a533a280bb3d7fb83c2a1b7cd5da6b09 \
         /wd/apache-tomcat-10.1.34.tar.gz | sha512sum -c - && \
     mkdir -p $TOMCAT_PARENT_DIR && \
