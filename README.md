@@ -1,6 +1,6 @@
 # openSUSE with Java 17 and Tomcat image
 
-This project builds on the openSUSE Java 17 image [here](https://github.com/CAFapi/opensuse-java17-images) to build two pre-configured Tomcat Docker images
+This project builds on the openSUSE Java 17 image [here](https://github.com/CAFapi/opensuse-base-images/tree/main/opensuse-java21-images) to build two pre-configured Tomcat Docker images
 that use two logging frameworks. One of the images uses the Logback logging framework and the other that uses Tomcat JULI logging.
 
 They can be used as base images for hosting web projects which use Java technologies such as Java Servlets or JavaServer Pages.
