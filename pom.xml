@@ -125,7 +125,7 @@
             <dependency>
                 <groupId>com.github.tomcat-slf4j-logback</groupId>
                 <artifactId>tomcat10-slf4j-logback</artifactId>
-                <version>10.1.41</version>
+                <version>10.1.42</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -140,7 +140,7 @@
             <dependency>
                 <groupId>org.apache.tomcat</groupId>
                 <artifactId>tomcat-juli</artifactId>
-                <version>10.1.41</version>
+                <version>10.1.42</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
