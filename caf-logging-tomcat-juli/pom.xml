@@ -28,6 +28,7 @@
     </parent>
 
     <artifactId>caf-logging-tomcat-juli</artifactId>
+    <name>caf-logging-tomcat-juli</name>
 
     <dependencies>
         <dependency>
