@@ -188,9 +188,9 @@
                 <configuration>
                     <imageManagement>
                         <image>
-                            <targetRepository>cafapi/opensuse-jre21</targetRepository>
+                            <targetRepository>cafapi/opensuse-jre17</targetRepository>
                             <repository>${dockerHubPublic}/cafapi/prereleases</repository>
-                            <tag>opensuse-jre21-5.0.0-SNAPSHOT</tag>
+                            <tag>opensuse-jre17-5.0.0-SNAPSHOT</tag>
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/opensuse/leap</repository>
