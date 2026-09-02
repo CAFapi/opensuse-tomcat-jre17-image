@@ -21,7 +21,7 @@
     <parent>
         <groupId>com.github.cafapi</groupId>
         <artifactId>opensuse-tomcat-images-aggregator</artifactId>
-        <version>4.0.4-SNAPSHOT</version>
+        <version>4.0.4-33</version>
     </parent>
     <artifactId>opensuse-tomcat-juli-image</artifactId>
     <packaging>pom</packaging>
