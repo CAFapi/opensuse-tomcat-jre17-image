@@ -143,7 +143,7 @@
             <dependency>
                 <groupId>org.apache.tomcat</groupId>
                 <artifactId>tomcat-juli</artifactId>
-                <version>11.0.24</version>
+                <version>11.0.25</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -193,18 +193,18 @@
                     <imageManagement>
                         <image>
                             <repository>${dockerHubPublic}/cafapi/opensuse-jre17</repository>
-                            <tag>7.0.3</tag>
-                            <digest>sha256:50aa5ba092a05bc4b9cd23e75773f003f664a78f1bb25d9377cb061ab77bdfca</digest>
+                            <tag>7.0.4</tag>
+                            <digest>sha256:1e063cf972f91584bdf78cc459b359b9a6a286a90a04b3a3f0b244c56fdcd46d</digest>
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/cafapi/opensuse-jre21</repository>
-                            <tag>7.0.3</tag>
-                            <digest>sha256:e326276a185ee536f6a7bfe764205dbbb5ce14f7ad53e1fe7da5321df9e75310</digest>
+                            <tag>7.0.4</tag>
+                            <digest>sha256:8ab07ae50380c1c00b77c026ab51df5d71ab7b6ca1954bba1ba43a4d65a3b8b1</digest>
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/cafapi/opensuse-jre25</repository>
-                            <tag>7.0.3</tag>
-                            <digest>sha256:3bd6f4ad73fc45170d9e2e960dd740746a15f2033caa9a38091a0c93113e00b2</digest>
+                            <tag>7.0.4</tag>
+                            <digest>sha256:12ef938f093967609f4069b234f75ae1ebb659664d46a8bfec847948faef0033</digest>
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/opensuse/leap</repository>
